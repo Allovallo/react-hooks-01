@@ -1,7 +1,12 @@
 import './styles.css';
+import { UserMenu } from './UserMenu';
 
-function App() {
-  return <div>App</div>;
-}
+const App = () => {
+  return (
+    <div>
+      <UserMenu />
+    </div>
+  );
+};
 
 export default App;
