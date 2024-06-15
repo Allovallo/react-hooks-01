@@ -1,4 +1,3 @@
-import './styles.css';
 import OldSignupForm from './components/SignupForm/SignupForm';
 
 const containerStyles = {

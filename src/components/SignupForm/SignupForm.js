@@ -1,4 +1,3 @@
-// import useLocalStorage from '../../hooks/useLocalStorage';
 import styles from './SignupForm.module.css';
 import React, { Component } from 'react';
 
