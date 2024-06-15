@@ -1,3 +1,4 @@
+import { Switch, Route } from 'react-router-dom';
 import OldSignupForm from './components/SignupForm/SignupForm';
 
 const containerStyles = {
@@ -11,7 +12,11 @@ const containerStyles = {
 export default function App() {
   return (
     <div style={containerStyles}>
-      <OldSignupForm />
+      <Switch>
+        <Route path="/signup">
+          <OldSignupForm />
+        </Route>
+      </Switch>
     </div>
   );
 }
