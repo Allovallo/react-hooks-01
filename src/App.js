@@ -1,11 +1,18 @@
 import './styles.css';
+import OldSignupForm from './components/SignupForm/SignupForm';
 
-const App = () => {
-  return (
-    <div>
-      <App />
-    </div>
-  );
+const containerStyles = {
+  maxWidth: 1170,
+  marginLeft: 'auto',
+  marginRight: 'auto',
+  paddingLeft: 15,
+  paddingRight: 15,
 };
 
-export default App;
+export default function App() {
+  return (
+    <div style={containerStyles}>
+      <OldSignupForm />
+    </div>
+  );
+}
