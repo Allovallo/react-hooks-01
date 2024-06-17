@@ -1,4 +1,4 @@
-import { Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import OldSignupForm from './components/SignupForm/SignupForm';
 
 const containerStyles = {
@@ -12,11 +12,13 @@ const containerStyles = {
 export default function App() {
   return (
     <div style={containerStyles}>
-      <Switch>
-        <Route path="/signup">
-          <OldSignupForm />
-        </Route>
-      </Switch>
+      <Router>
+        <Routes>
+          <Route path="/signup">
+            <OldSignupForm />
+          </Route>
+        </Routes>
+      </Router>
     </div>
   );
 }
