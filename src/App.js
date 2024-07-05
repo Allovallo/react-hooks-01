@@ -13,13 +13,11 @@ const containerStyles = {
 export default function App() {
   return (
     <div style={containerStyles}>
-      <Router>
-        <Routes>
-          <Route path="/signup">
-            <OldSignupForm />
-          </Route>
-        </Routes>
-      </Router>
+      {/* <Router> */}
+      <Routes>
+        <Route path="/signup" element={<OldSignupForm />}></Route>
+      </Routes>
+      {/* </Router> */}
     </div>
   );
 }
