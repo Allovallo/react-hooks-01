@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Router, Route, Routes } from 'react-router-dom';
+
 import OldSignupForm from './components/SignupForm/SignupForm';
 
 const containerStyles = {
