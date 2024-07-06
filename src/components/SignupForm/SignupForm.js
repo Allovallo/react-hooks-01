@@ -2,11 +2,13 @@ import styles from './SignupForm.module.css';
 import { useState } from 'react';
 
 export default function SignupForm() {
-  const [email, setEmail] = useState('');
+  const [state, setState] = useState({
+    email: '',
+    password: '',
+  });
 
   const handleEmailChange = event => {
-    console.log(event.target.value);
-    setEmail(event.target.value);
+    // setEmail(event.target.value);
   };
 
   return (
@@ -14,6 +16,16 @@ export default function SignupForm() {
       <label className={styles.label}>
         <span>Пошта</span>
         <input type="email" name="email" onChange={handleEmailChange} value={email} />
+      </label>
+
+      <label className={styles.label}>
+        <span>Пароль</span>
+        <input
+          type="password"
+          name="password"
+          onChange={this.handleChange}
+          value={this.state.password}
+        />
       </label>
 
       <button type="submit">Зарегистрироваться</button>
