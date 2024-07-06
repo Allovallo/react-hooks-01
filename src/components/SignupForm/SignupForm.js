@@ -1,37 +1,57 @@
 import styles from './SignupForm.module.css';
-import React, { Component } from 'react';
+import { useState } from 'react';
 
-export default class OldSignupForm extends Component {
-  state = {
-    email: '',
-    password: '',
+export default function SignupForm() {
+  const [email, setEmail] = useState('');
+
+  const handleEmailChange = event => {
+    console.log(event.target.value);
+    setEmail(event.target.value);
   };
 
-  handleChange = evt => {
-    const { name, value } = evt.target;
-    this.setState({ [name]: value });
-  };
+  return (
+    <form className={styles.form} autoComplete="off">
+      <label className={styles.label}>
+        <span>Пошта</span>
+        <input type="email" name="email" onChange={handleEmailChange} value={email} />
+      </label>
 
-  render() {
-    return (
-      <form className={styles.form} autoComplete="off">
-        <label className={styles.label}>
-          <span>Почта</span>
-          <input type="email" name="email" onChange={this.handleChange} value={this.state.email} />
-        </label>
-
-        <label className={styles.label}>
-          <span>Пароль</span>
-          <input
-            type="password"
-            name="password"
-            onChange={this.handleChange}
-            value={this.state.password}
-          />
-        </label>
-
-        <button type="submit">Зарегистрироваться</button>
-      </form>
-    );
-  }
+      <button type="submit">Зарегистрироваться</button>
+    </form>
+  );
 }
+
+// export default class OldSignupForm extends Component {
+//   state = {
+//     email: '',
+//     password: '',
+//   };
+
+//   handleChange = evt => {
+//     const { name, value } = evt.target;
+//     this.setState({ [name]: value });
+//   };
+
+//   render() {
+//     return (
+//       <form className={styles.form} autoComplete="off">
+//         <label className={styles.label}>
+//           <span>Почта</span>
+//           <input type="email" name="email" onChange={this.handleChange} value={this.state.email} />
+//         </label>
+
+//         <label className={styles.label}>
+//           <span>Пароль</span>
+//           <input
+//             type="password"
+//             name="password"
+//             onChange={this.handleChange}
+//             value={this.state.password}
+//           />
+//         </label>
+
+//         <button type="submit">Зарегистрироваться</button>
+//       </form>
+//     );
+//   }
+// }
