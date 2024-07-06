@@ -1,4 +1,4 @@
-import { Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes, Router } from 'react-router-dom';
 
 import OldSignupForm from './components/SignupForm/SignupForm';
 
@@ -15,7 +15,7 @@ export default function App() {
     <div style={containerStyles}>
       {/* <Router> */}
       <Routes>
-        <Route path="/signup" element={<OldSignupForm />}></Route>
+        <Route path="*" element={<OldSignupForm />}></Route>
       </Routes>
       {/* </Router> */}
     </div>
