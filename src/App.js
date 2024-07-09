@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 
 // import SignupForm from './components/SignupForm/SignupForm';
 // import ColorPicker from './components/ColorPicker/ColorPicker';
-// import OldCounter from './components/Counter/Counter';
+import Counter from './components/Counter/Counter';
 // import OldClock from './components/Clock/Clock';
 
 // const colorPickerOptions = [
@@ -28,7 +28,7 @@ export default function App() {
       <Routes>
         {/* <Route path="*" element={<SignupForm />}></Route> */}
         {/* <Route path="*" element={<ColorPicker options={colorPickerOptions} />}></Route> */}
-        {/* <Route path="*" element={<OldCounter />}></Route> */}
+        <Route path="*" element={<Counter />}></Route>
         {/* <Route path="*" element={<OldClock />}></Route> */}
       </Routes>
     </div>
