@@ -1,16 +1,18 @@
 import { Route, Routes } from 'react-router-dom';
 
 // import SignupForm from './components/SignupForm/SignupForm';
-import OldColorPicker from './components/ColorPicker/ColorPicker';
+// import ColorPicker from './components/ColorPicker/ColorPicker';
+// import OldCounter from './components/Counter/Counter';
+// import OldClock from './components/Clock/Clock';
 
-const colorPickerOptions = [
-  { label: 'red', color: '#F44336' },
-  { label: 'green', color: '#4CAF50' },
-  { label: 'blue', color: '#2196F3' },
-  { label: 'grey', color: '#607D8B' },
-  { label: 'pink', color: '#E91E63' },
-  { label: 'indigo', color: '#3F51B5' },
-];
+// const colorPickerOptions = [
+//   { label: 'red', color: '#F44336' },
+//   { label: 'green', color: '#4CAF50' },
+//   { label: 'blue', color: '#2196F3' },
+//   { label: 'grey', color: '#607D8B' },
+//   { label: 'pink', color: '#E91E63' },
+//   { label: 'indigo', color: '#3F51B5' },
+// ];
 
 const containerStyles = {
   maxWidth: 1170,
@@ -25,7 +27,9 @@ export default function App() {
     <div style={containerStyles}>
       <Routes>
         {/* <Route path="*" element={<SignupForm />}></Route> */}
-        <Route path="*" element={<OldColorPicker options={colorPickerOptions} />}></Route>
+        {/* <Route path="*" element={<ColorPicker options={colorPickerOptions} />}></Route> */}
+        {/* <Route path="*" element={<OldCounter />}></Route> */}
+        {/* <Route path="*" element={<OldClock />}></Route> */}
       </Routes>
     </div>
   );
