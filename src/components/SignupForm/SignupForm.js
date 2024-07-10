@@ -1,17 +1,5 @@
 import styles from './SignupForm.module.css';
-import { useState, useEffect } from 'react';
-
-const useLocalStorage = (key, defaultValue) => {
-  const [state, setState] = useState(() => {
-    return JSON.parse(window.localStorage.getItem(key ?? ''));
-  });
-
-  useEffect(() => {
-    window.localStorage.setItem(key, JSON.stringify(state));
-  }, [key, state]);
-
-  return [state, setState];
-};
+import useLocalStorage from '../../hooks/useLocalStorage';
 
 export default function SignupForm() {
   const [email, setEmail] = useLocalStorage('email', '');
@@ -33,14 +21,6 @@ export default function SignupForm() {
         return;
     }
   };
-
-  // useEffect(() => {
-  //   window.localStorage.setItem('email', JSON.stringify(email));
-  // }, [email]);
-
-  // useEffect(() => {
-  //   window.localStorage.setItem('password', JSON.stringify(password));
-  // }, [password]);
 
   return (
     <form className={styles.form} autoComplete="off">

@@ -27,9 +27,12 @@ export default class OldClock extends Component {
   render() {
     return (
       <div className={styles.container}>
-        <p className={styles.clockface}>Поточний час: {this.state.time.toLocaleTimeString()}</p>
+        <p className={styles.clockface}>
+          Поточний час:
+          {this.state.time.toLocaleTimeString()}
+        </p>
         <button type="button" onClick={this.stop}>
-          Остановить
+          Зупинити
         </button>
       </div>
     );
