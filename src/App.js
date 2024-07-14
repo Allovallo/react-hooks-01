@@ -25,7 +25,7 @@ const containerStyles = {
 export default function App() {
   return (
     <div style={containerStyles}>
-      <AppBar>
+      <AppBar/>
       
       <Routes>
         <Route path="/signup" element={<SignupForm />}></Route>
@@ -34,7 +34,6 @@ export default function App() {
         <Route path="/clock" element={<Clock />}></Route>
       </Routes>
         
-        </AppBar>
     </div>
   );
 }
