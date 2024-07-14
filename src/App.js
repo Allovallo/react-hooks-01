@@ -4,6 +4,7 @@ import SignupForm from './components/SignupForm/SignupForm';
 import ColorPicker from './components/ColorPicker/ColorPicker';
 import Counter from './components/Counter/Counter';
 import Clock from './components/Clock/Clock';
+import PokemonView from './views/PokemonView';
 
 const colorPickerOptions = [
   { label: 'red', color: '#F44336' },
@@ -32,6 +33,8 @@ export default function App() {
         <Route path="/colorpicker" element={<ColorPicker options={colorPickerOptions} />}></Route>
         <Route path="/counter" element={<Counter />}></Route>
         <Route path="/clock" element={<Clock />}></Route>
+        <Route path='/pokemon' element={<PokemonView />}></Route>
+
       </Routes>
         
     </div>
