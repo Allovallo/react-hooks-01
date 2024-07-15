@@ -27,8 +27,8 @@ export default function SkipEffectOnFirstRender() {
     <div>
       <button onClick={() => setCount(c => c + 1)}>{count}</button>
       <p>
-        <code style={styles.code}>useEffect</code> цього компоненту не
-        виконується на першому рендері
+        <code style={styles.code}>useEffect</code> цього компоненту не виконується на першому
+        рендері
       </p>
     </div>
   );
