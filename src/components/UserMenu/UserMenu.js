@@ -11,9 +11,9 @@ export default function UserMenu({ onLogOut, user }) {
         height="32"
         className={styles.avatar}
       />
-      <p className={styles.name}>Добро пожаловать, {user.name}</p>
+      <p className={styles.name}>Ласкаво просимо, {user.name}</p>
       <button type="button" onClick={onLogOut}>
-        Выйти
+        Вийти
       </button>
     </div>
   );

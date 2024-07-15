@@ -41,7 +41,23 @@ const Navigation = () => (
       className={styles.link}
       activeClassName={styles.activeLink}
     >
-      Покемони
+      Покемони з хуками
+    </NavLink>
+
+    <NavLink
+      to='/skip-first-render'
+      className={styles.link}
+      activeClassName={styles.activeLink}
+    >
+      Пропуск першого рендеру
+    </NavLink>
+
+    <NavLink
+      to='/notes'
+      className={styles.link}
+      activeClassName={styles.activeLink}
+    >
+      useMemo
     </NavLink>
   </nav>
 );

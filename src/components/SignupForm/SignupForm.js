@@ -34,7 +34,7 @@ export default function SignupForm() {
         <input type="password" name="password" onChange={handleChange} value={password} />
       </label>
 
-      <button type="submit">Зарегистрироваться</button>
+      <button type="submit">Зареєструватися</button>
     </form>
   );
 }

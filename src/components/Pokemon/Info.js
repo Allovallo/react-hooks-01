@@ -37,7 +37,7 @@ export default class PokemonInfo extends Component {
     const { pokemonName } = this.props;
 
     if (status === 'idle') {
-      return <div>Введите имя покемона.</div>;
+      return <div>Введить ім'я покемону!</div>;
     }
 
     if (status === 'pending') {

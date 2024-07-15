@@ -28,7 +28,7 @@ export default function PokemonPendingView({ pokemonName }) {
     <div role="alert">
       <div style={styles.spinner}>
         <ImSpinner size="32" className="icon-spin" />
-        Загружаем...
+        Завантажуємо...
       </div>
       <PokemonDataView pokemon={pokemon} />
     </div>
