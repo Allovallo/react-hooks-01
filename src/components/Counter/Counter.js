@@ -1,20 +1,39 @@
-import { useState, useReducer } from 'react';
+import { useReducer } from 'react';
 import styles from './Counter.module.css';
 
-function countReducer() {}
+function countReducer(state, action) {
+  switch (action.type) {
+    case 'increment':
+      return { ...state, count: state.count + action.payload };
+
+    case 'decrement':
+      return { ...state, count: state.count - action.payload };
+
+    default:
+      throw new Error(`Unsupported action type ${action.type}`);
+  }
+}
 
 export default function Counter() {
-  // const [count, setCount] = useState(0);
-
-  const [count, setCount] = useReducer(countReducer, 0);
+  const [state, dispatch] = useReducer(countReducer, {
+    count: 0,
+  });
 
   return (
     <div className={styles.container}>
-      <p className={styles.value}>{count}</p>
-      <button className={styles.btn} type="button" onClick={() => setCount(state => state + 1)}>
+      <p className={styles.value}>{state.count}</p>
+      <button
+        className={styles.btn}
+        type="button"
+        onClick={() => dispatch({ type: 'increment', payload: 1 })}
+      >
         Збільшити
       </button>
-      <button className={styles.btn} type="button" onClick={() => setCount(state => state - 1)}>
+      <button
+        className={styles.btn}
+        type="button"
+        onClick={() => dispatch({ type: 'decrement', payload: 1 })}
+      >
         Зменшити
       </button>
     </div>
