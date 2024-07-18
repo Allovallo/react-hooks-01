@@ -1,35 +1,58 @@
+import { useState, useReducer } from 'react';
 import styles from './Counter.module.css';
-import { useState, useEffect } from 'react';
+
+function countReducer() {}
 
 export default function Counter() {
-  const [counterA, setCounterA] = useState(0);
-  const [counterB, setCounterB] = useState(0);
+  // const [count, setCount] = useState(0);
 
-  const handleCounterAIncrement = () => {
-    setCounterA(prevState => prevState + 1);
-  };
-
-  const handleCounterBIncrement = () => {
-    setCounterB(prevState => prevState + 1);
-  };
-
-  useEffect(() => {
-    const totalClicks = counterA + counterB;
-    document.title = `Всього клікнули ${totalClicks} разів`;
-  }, [counterA, counterB]);
+  const [count, setCount] = useReducer(countReducer, 0);
 
   return (
-    <>
-      <button className={styles.btn} type="button" onClick={handleCounterAIncrement}>
-        Клікнули counterA {counterA} разів
+    <div className={styles.container}>
+      <p className={styles.value}>{count}</p>
+      <button className={styles.btn} type="button" onClick={() => setCount(state => state + 1)}>
+        Збільшити
       </button>
-
-      <button className={styles.btn} type="button" onClick={handleCounterBIncrement}>
-        Клікнули counterB {counterB} разів
+      <button className={styles.btn} type="button" onClick={() => setCount(state => state - 1)}>
+        Зменшити
       </button>
-    </>
+    </div>
   );
 }
+
+// import styles from './Counter.module.css';
+// import { useState, useEffect } from 'react';
+
+// export default function Counter() {
+//   const [counterA, setCounterA] = useState(0);
+//   const [counterB, setCounterB] = useState(0);
+
+//   const handleCounterAIncrement = () => {
+//     setCounterA(prevState => prevState + 1);
+//   };
+
+//   const handleCounterBIncrement = () => {
+//     setCounterB(prevState => prevState + 1);
+//   };
+
+//   useEffect(() => {
+//     const totalClicks = counterA + counterB;
+//     document.title = `Всього клікнули ${totalClicks} разів`;
+//   }, [counterA, counterB]);
+
+//   return (
+//     <>
+//       <button className={styles.btn} type="button" onClick={handleCounterAIncrement}>
+//         Клікнули counterA {counterA} разів
+//       </button>
+
+//       <button className={styles.btn} type="button" onClick={handleCounterBIncrement}>
+//         Клікнули counterB {counterB} разів
+//       </button>
+//     </>
+//   );
+// }
 
 // class OldCounter extends Component {
 //   state = {
