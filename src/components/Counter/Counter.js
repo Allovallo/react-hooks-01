@@ -14,10 +14,21 @@ function countReducer(state, action) {
   }
 }
 
+function init(initialState) {
+  return {
+    ...initialState,
+    count: initialState.count + 100,
+  };
+}
+
 export default function Counter() {
-  const [state, dispatch] = useReducer(countReducer, {
-    count: 0,
-  });
+  const [state, dispatch] = useReducer(
+    countReducer,
+    {
+      count: 0,
+    },
+    init
+  );
 
   return (
     <div className={styles.container}>
